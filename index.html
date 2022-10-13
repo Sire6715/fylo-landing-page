@@ -14,9 +14,9 @@
     <div role="navigation">
         <nav class="navbar">
             <div>
-                <img src="./images/logo.svg" class="nav--logo" alt="a'navlogo">
+                <img src="./images/logo.svg" class="nav--logo" alt="navlogo">
             </div>
-            <div>
+            <div class="navbar-nav">
                 <ul class="nav--items Raleway font-sm" role="list">
                     <li>features</li>
                     <li>team</li>
@@ -29,14 +29,14 @@
     <!-- hero -->
     <div class="hero wrapper">
         <div class="hero--article " role="article">
-            <h1 class="Raleway font-xl">All files in one secure <br> location,accessible anywhere</h1>
-            <p class="font-sm">fylo stores your most important file in one secure location.
+            <h1 class="Raleway font-xl text-primary-400">All files in one secure <br> location,accessible anywhere</h1>
+            <p class="font-sm text-primary-400">fylo stores your most important file in one secure location.
                 access them whenever you need,share and collaborate with
                 friends,family and co-workers.
             </p>
             <div role="form" class="hero--form">
                 <input type="email" placeholder="input your email...">
-                <button>Get started</button>
+                <button class="bg-accent-400 text-nuetral-400 ">Get started</button>
             </div>
         </div>
 
@@ -49,15 +49,17 @@
     <div class="wrapper about">
         <div>
             <div class="about--article" role="article">
-                <h1 class="Raleway font-xl">stay productive, wherever you are</h1>
-                <p class="font-sm">never let locstion be an issue when accessing your files.<br>
+                <h1 class="Raleway font-xl text-primary-400">stay productive, wherever you are</h1>
+                <p class="font-sm text-primary-400">never let locstion be an issue when accessing your files.<br>
                     Fylo has you covered for your storage needs
                 </p>
                 <p class="font-sm">
                     securely share files and folders with friends,family and collegues for<br>
                     live collaboration.no emails attachment required.
                 </p>
-                <a href="#">see how fylo works</a>
+                <span class="fylo--link"><a href="#">see how fylo works</a><img src="./images/icon-arrow.svg"
+                        alt="arrow">
+                </span>
             </div>
             <!-- testimonial -->
             <div class="testimonial">
@@ -80,6 +82,57 @@
         <div role="img">
             <img src="./images/illustration-2.svg" class="about-illustration" alt="about illustration">
         </div>
+    </div>
+    <!-- subscription -->
+    <div class="subscription bg-primary-200">
+        <div role="article">
+            <h1 class="text-nuetral-400">Get early access today</h1>
+            <p class="text-nuetral-400">it only takes a minute to sign-up and our free starter tier
+                <br>is extremely generous.if you have any questions our support team<br>
+                would be happy to help you.
+            </p>
+        </div>
+
+        <div role="form" class="subscription--form">
+            <input type="email" placeholder="email@example.com">
+            <button role="button" class="bg-accent-400 text-nuetral-400 ">Get Started For Free</button>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer bg-primary-400">
+        <div>
+            <img src="./images/logo2.svg" alt="footerlogo" class="footer--logo">
+            <ul role="list" class="footer--list contacts">
+                <li><span><img src="./images/icon-phone.svg" alt="phone">Phone: +1-543-123-4567</span></li>
+                <li><span><img src="./images/icon-email.svg" alt="email">example@fylo.com</span></li>
+            </ul>
+        </div>
+
+        <div>
+            <ul role="list" class="footer--list">
+                <li>about</li>
+                <li>jobs</li>
+                <li>press</li>
+                <li>blogs</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul role="list" class="footer--list">
+                <li>Contact Us</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
+        
+        <div>
+            <ul role="list" class="footer--list">
+                <li>Contact Us</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
+
     </div>
 </body>
 
