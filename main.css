@@ -19,6 +19,8 @@ html:focus-within {
     --light-Grayish-Blue: hsl(240, 75%, 98%);
     --Light-Gray: hsl(0, 0%, 75%);
 
+    --button-hover: hsl(224, 100%, 74%);
+
     /* font */
     --Open-sans: 'Open Sans', sans-serif;
     --Raleway: 'Raleway', sans-serif;
@@ -68,13 +70,13 @@ html:focus-within {
 }
 
 .font-sm {
-    font-size: clamp(10px, 10vw, 12px);
+    font-size: clamp(10px, 5vw, 12px);
     font-weight: 600;
     line-height: 1.5em;
 }
 
 .font-xl {
-    font-size: clamp(15px, 10vw, 30px);
+    font-size: clamp(15px, 5vw, 30px);
     font-weight: 800;
     line-height: 1.4em;
 }
@@ -126,13 +128,13 @@ body {
     height: 3px;
     width: 0px;
     background: transparent;
-    transition: width .5s ease, background-color .5s ease !important;
+    transition: width .3s ease, background-color .3s ease !important;
 }
 
 .nav--items>li:hover:after {
     width: 100%;
     background: var(--Very-Dark-Blue);
-  }
+}
 
 ul[role="list"],
 ol[role="list"] {
@@ -151,7 +153,7 @@ ol[role="list"] {
 
 .hero--article,
 .about-article {
-    padding: 4em 2em 0em 0em;
+    padding: 4em 0em 0em 0em;
 }
 
 .hero--article>h1 {
@@ -165,8 +167,8 @@ ol[role="list"] {
 }
 
 .hero--illustration,
-.about-illustration {
-    max-width: 33em;
+.about--illustration {
+    max-width: 100%;
 }
 
 .hero--form {
@@ -177,7 +179,7 @@ ol[role="list"] {
 }
 
 .hero--form>input {
-    padding: 0.6em;
+    padding: 0.7em;
     width: 60%;
     border: 1px solid var(--Light-Gray);
     border-radius: 4px;
@@ -186,7 +188,7 @@ ol[role="list"] {
 .hero--form>button {
     border: 1px solid var(--Bright-Blue);
     border-radius: 3px;
-    padding: 0.6em;
+    padding: 0.7em;
     width: 40%;
 }
 
@@ -227,7 +229,7 @@ a {
 
 .testimonial>p {
     padding-right: 5em;
-    font-size: clamp(6px, 10vw, 10px);
+    font-size: clamp(6px, 5vw, 10px);
     font-weight: 600;
     line-height: 2em;
 }
@@ -262,14 +264,14 @@ a {
 }
 
 .subscription>div>h1 {
-    font-size: clamp(14px, 10vw, 20px);
+    font-size: clamp(14px, 5vw, 20px);
     letter-spacing: 1px;
     font-weight: 800;
     line-height: 2.5em;
 }
 
 .subscription>div>p {
-    font-size: clamp(10px, 10vw, 12px);
+    font-size: clamp(10px, 5vw, 12px);
     letter-spacing: 1px;
     font-weight: 500;
     line-height: 2em;
@@ -324,7 +326,7 @@ a {
 }
 
 .footer--list>li {
-    font-size: clamp(10px, 10vw, 12px);
+    font-size: clamp(10px, 5vw, 12px);
     color: var(--light-Grayish-Blue);
     font-weight: 400;
     margin: 1em 0em;
@@ -333,7 +335,154 @@ a {
 }
 
 .footer--list>li:hover {
-    font-size: clamp(11px, 10vw, 13px);
+    font-size: clamp(11px, 5vw, 13px);
     font-weight: 600;
     color: var(--Desaturated-Blue)
+}
+
+button:hover{
+   background: var(--button-hover); 
+   cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .nav--logo {
+        width: 3em;
+    }
+
+    br{
+        display: none;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .navbar-nav {
+        margin-right: 1em;
+    }
+
+    .nav--items {
+        gap: 1em;
+    }
+
+    .hero {
+        margin-bottom: 4em;
+        padding-left: 0 !important;
+    }
+
+    .hero--illustration,
+    .about--illustration {
+        max-width: 16em;
+        grid-row-start: 1;
+    }
+
+    .hero--article {
+        grid-row-start: 2;
+        padding: 4em 2em 0em 2em;
+    }
+
+    .hero--article>p {
+        padding: 0;
+    }
+
+    .hero--form {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .hero--form>input {
+        width: 100%;
+    }
+
+    .hero--form>button {
+        width: 100%;
+    }
+
+    .about {
+        background-image: url(./images/bg-curve-mobile.svg);
+        background-size: cover;
+        background-position-x: center;
+        background-repeat: no-repeat;
+    }
+
+    .about--article {
+        text-align: left;
+    }
+
+    .desc{
+        grid-row-start: 2;
+    }
+
+    .about--article>h1 {
+        font-size: 16px;
+        font-weight: 800;
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .about--article>p {
+        font-size: 12px;
+        font-weight: 500;
+        width: 85%;
+    }
+
+    .fylo--link {
+        justify-content: center;
+        align-items: center;
+        margin: 2em 3em;
+    }
+
+
+    .testimonial {
+        max-width: 90%;
+        padding: 2em 0em 1em 2em;
+    }
+
+    .subscription,
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .subscription{
+        text-align: center;
+        padding: 6em 2em;
+    }
+
+    .subscription--form{
+        margin-top: 2em !important;
+        width: 80%;
+        margin: auto;
+    }
+
+    .subscription--form>button{
+        max-width: 100%;
+    }
+
+    .footer--logo{
+        width: 10em;
+    }
+
+    .contact--icon{
+        width: 1em;
+        height: 1em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .testimonial{
+        max-width: 100%;
+        padding: 3em 2em 1em 2em;
+    }
+
+    .testimonial>p{
+        padding: 0;
+    }
+    
 }
