@@ -4,6 +4,7 @@
 
 html:focus-within {
     scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
 }
 
 :root {
@@ -70,13 +71,13 @@ html:focus-within {
 }
 
 .font-sm {
-    font-size: clamp(10px, 5vw, 12px);
+    font-size: clamp(10px, 3vw, 12px);
     font-weight: 600;
     line-height: 1.5em;
 }
 
 .font-xl {
-    font-size: clamp(15px, 5vw, 30px);
+    font-size: clamp(15px, 3vw, 30px);
     font-weight: 800;
     line-height: 1.4em;
 }
@@ -223,13 +224,14 @@ a {
     padding: 3em 2em 1em 2em;
     margin-top: 3em;
     border-radius: 10px;
-    max-width: 45%;
+    max-width: 60%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 .testimonial>p {
     padding-right: 0em;
-    font-size: clamp(6px, 5vw, 10px);
+    font-size: clamp(6px, 3vw, 10px);
     font-weight: 600;
     line-height: 2em;
 }
@@ -248,12 +250,12 @@ a {
 }
 
 .name {
-    font-size: clamp(9px, 10vw, 10px);
+    font-size: clamp(9px, 3vw, 10px);
     font-weight: 600;
 }
 
 .ess {
-    font-size: clamp(6px, 10vw, 8px);
+    font-size: clamp(6px, 3vw, 8px);
 }
 
 .subscription {
@@ -264,14 +266,14 @@ a {
 }
 
 .subscription>div>h1 {
-    font-size: clamp(14px, 5vw, 20px);
+    font-size: clamp(14px, 3vw, 20px);
     letter-spacing: 1px;
     font-weight: 800;
     line-height: 2.5em;
 }
 
 .subscription>div>p {
-    font-size: clamp(10px, 5vw, 12px);
+    font-size: clamp(10px, 3vw, 12px);
     letter-spacing: 1px;
     font-weight: 500;
     line-height: 2em;
@@ -303,7 +305,7 @@ a {
 
 .subscription--form>button {
     padding: 0.7em;
-    max-width: 40%;
+    max-width: 66%;
     border: 1px solid var(--Bright-Blue);
     border-radius: 3px;
     font-size: 11px;
@@ -326,7 +328,7 @@ a {
 }
 
 .footer--list>li {
-    font-size: clamp(10px, 5vw, 12px);
+    font-size: clamp(10px, 3vw, 12px);
     color: var(--light-Grayish-Blue);
     font-weight: 400;
     margin: 1em 0em;
@@ -335,7 +337,7 @@ a {
 }
 
 .footer--list>li:hover {
-    font-size: clamp(11px, 5vw, 13px);
+    font-size: clamp(11px, 3vw, 13px);
     font-weight: 600;
     color: var(--Desaturated-Blue)
 }
@@ -345,9 +347,38 @@ button:hover{
    cursor: pointer;
 }
 
+.icons{
+    display: flex;
+    gap: clamp(0.5em,3vw,1em);
+}
+
+.icons>li>i{
+    border: 1px solid var(--light-Grayish-Blue);
+    border-radius: 50%;
+    padding: 1em;
+    /* width: clamp(1em,3vw,3em); */
+}
+
+.icons>li>i:last-child{
+    padding: 1em 1.2em;
+}
+
+.icons>li:nth-child(1):hover{
+    color: #4267B2;
+}
+
+.icons>li:nth-child(2):hover{
+    color: #1DA1F2;
+}
+
+.icons>li:nth-child(3):hover{
+    color: #E1306C;
+}
+
+
 @media screen and (max-width: 500px) {
     .nav--logo {
-        width: 3em;
+        width: 6em;
     }
 
     br{
@@ -422,16 +453,17 @@ button:hover{
     }
 
     .about--article>h1 {
+        align-self: center;
         font-size: 16px;
         font-weight: 800;
-        width: 100%;
+        width: 90%;
         margin: 2em auto;
     }
 
     .about--article>p {
         font-size: 12px;
         font-weight: 500;
-        width: 85%;
+        width: 100%;
     }
 
     .fylo--link {
@@ -467,6 +499,10 @@ button:hover{
         max-width: 100%;
     }
 
+    .footer--list{
+        gap: 2em;
+    }
+
     .footer--logo{
         width: 10em;
     }
@@ -475,6 +511,13 @@ button:hover{
         width: 1em;
         height: 1em;
     }
+
+    .icons{
+        display: flex;
+        margin-top: 3em;
+        justify-content: center;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -486,6 +529,14 @@ button:hover{
 
     .testimonial>p{
         padding: 0;
+    }
+
+    .footer{
+        grid-template-columns: 1fr;
+    }
+
+    .icons{
+        justify-content: center;
     }
     
 }
