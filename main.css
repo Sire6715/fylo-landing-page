@@ -481,6 +481,7 @@ button:hover{
     .testimonial{
         max-width: 100%;
         padding: 3em 2em 1em 2em;
+        max-width: 100%;
     }
 
     .testimonial>p{
