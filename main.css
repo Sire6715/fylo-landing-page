@@ -228,7 +228,7 @@ a {
 }
 
 .testimonial>p {
-    padding-right: 5em;
+    padding-right: 0em;
     font-size: clamp(6px, 5vw, 10px);
     font-weight: 600;
     line-height: 2em;
