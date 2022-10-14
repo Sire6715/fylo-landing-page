@@ -405,10 +405,12 @@ button:hover{
     }
 
     .about {
+        align-items: center;
         background-image: url(./images/bg-curve-mobile.svg);
         background-size: cover;
         background-position-x: center;
         background-repeat: no-repeat;
+        text-align: center;
     }
 
     .about--article {
@@ -423,7 +425,7 @@ button:hover{
         font-size: 16px;
         font-weight: 800;
         width: 100%;
-        margin-bottom: 2em;
+        margin: 2em auto;
     }
 
     .about--article>p {
